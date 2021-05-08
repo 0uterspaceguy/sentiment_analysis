@@ -5,6 +5,8 @@ from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
 from CONST import *
 
+stemmer = SnowballStemmer("russian")
+morph = MorphAnalyzer()
 
 def remove_stopwords(sentence):
     """

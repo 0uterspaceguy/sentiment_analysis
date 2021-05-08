@@ -29,9 +29,6 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    stemmer = SnowballStemmer("russian")
-    morph = MorphAnalyzer()
-
     nltk.download('punkt')
     nltk.download('stopwords')
 
