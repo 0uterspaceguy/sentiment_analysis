@@ -2,6 +2,7 @@ from Dataset import *
 from Dataloader import *
 from Model import *
 
+import nltk
 import os.path as p
 import argparse
 

@@ -3,6 +3,7 @@ from Dataloader import *
 from Model import *
 import os.path as p
 import argparse
+import nltk
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Model testing script')
