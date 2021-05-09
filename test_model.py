@@ -11,7 +11,7 @@ if __name__ == '__main__':
     parser.add_argument('--data_directory', type=str, default='sentiment-datasets', help='Path to data directory')
     parser.add_argument('--hug_path', type=str, default='nlptown/bert-base-multilingual-uncased-sentiment',
                         help='Path to model on hugginface library')
-    parser.add_argument('--local_path', type=str, default='model.pth',
+    parser.add_argument('--local_path', type=str, default='model/model.pth',
                         help='Path to your trained model')
     parser.add_argument('--batch_size', type=int, default=10, help='Size of batches')
 
