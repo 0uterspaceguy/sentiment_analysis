@@ -14,7 +14,7 @@ def send_sentiment():
     text = data['text']
 
     prepared_text = dataset.prepare_text(text)
-    ids, mask = dataset.tokenize(prepared_text)
+    ids, mask = dataset.tokenize_text(prepared_text)
     sentiment = model.predict(ids, mask)[0]
     json_sentiment = {'label': sentiments[sentiment]}
 
