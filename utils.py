@@ -8,6 +8,27 @@ from CONST import *
 stemmer = SnowballStemmer("russian")
 morph = MorphAnalyzer()
 
+def pad_sequences(seq, maxlen, dtype, truncating, padding):
+    """
+    Function prepocess sequence by maxlength:
+
+    Args:
+        seq (list): sequence of numbers
+
+    Returns:
+        (np.ndarray): array with shape (1, maxlen)
+    """
+  if len(seq) > maxlen:
+    if truncating == 'pre':
+      return np.array([seq[len(seq)-maxlen:]], dtype=dtype)
+    elif truncating == 'post':
+      return np.array([seq[:maxlen]], dtype=dtype)
+  else:
+    if padding == 'pre':
+      return np.array([[0]*(maxlen-len(seq)) + seq], dtype=dtype)
+    elif padding == 'post':
+      return np.array([seq + [0]*(maxlen-len(seq)) ], dtype=dtype)
+
 def remove_stopwords(sentence):
     """
     Function removes stopwords from sentence:
