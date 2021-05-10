@@ -5,17 +5,17 @@
 ## Зависимости
 
 ```bash
-pandas == 1.1.5
-numpy == 1.19.5
-argparse == 1.4.0
-pymorphy2 == 0.9.1
-nltk == 3.2.5
-transformers == 2.8.0
-sklearn == 0.23.0
-torch == 1.8.1
-tqdm == 4.41.4
-flask == 1.1.1 
-requests == 2.22.0
+pandas
+numpy 
+argparse
+pymorphy2
+nltk
+transformers
+sklearn 
+torch 
+tqdm 
+flask  
+requests
 ```
 
 ## Использование
