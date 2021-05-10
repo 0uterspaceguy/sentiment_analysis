@@ -63,4 +63,4 @@ if __name__ == "__main__":
     model = Model(args.hug_path, args.local_path)
     print('Model loaded succesfully')
 
-    app.run()
+    app.run(host='0.0.0.0')
