@@ -1,6 +1,5 @@
 import json
 from transformers import AutoTokenizer
-from keras.preprocessing.sequence import pad_sequences
 import numpy as np
 from utils import *
 import random
@@ -110,7 +109,7 @@ class Dataset():
         ids = self.tokenizer.convert_tokens_to_ids(self.tokenizer.tokenize(sentence))
 
         ids = pad_sequences(
-            [ids],
+            ids,
             maxlen=512,
             dtype="long",
             truncating="pre",
