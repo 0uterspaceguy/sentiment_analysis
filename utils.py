@@ -4,6 +4,7 @@ from nltk import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
 from CONST import *
+import numpy as np
 
 stemmer = SnowballStemmer("russian")
 morph = MorphAnalyzer()
