@@ -5,6 +5,7 @@ import os.path as p
 import argparse
 import json
 import nltk
+import numpy as np
 
 app = Flask(__name__)
 
@@ -15,6 +16,9 @@ def send_sentiment():
 
     prepared_text = dataset.prepare_text(text)
     ids, mask = dataset.tokenize_text(prepared_text)
+    ids = ids[np.newaxis, :]
+    mask = mask[np.newaxis, :]
+   
     sentiment = model.predict(ids, mask)[0]
     json_sentiment = {'label': sentiments[sentiment]}
 
